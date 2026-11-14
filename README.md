@@ -1,16 +1,42 @@
-# React + Vite
+Mark John Magos | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive personal portfolio website built with React,
 
-Currently, two official plugins are available:
+Repository: https://github.com/Mark-john01/Magos-portfolio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Pages
+Route	Page	What it shows
+/	Home	Introduction and links to projects and contact
+/about	About	Background, education timeline, and skills
+/projects	Projects	Project cards with screenshot, description, and links
+/contact	Contact	Email and GitHub links
+*	Not Found	A 404 page for any URL that doesn't exist
+Features
+Shared layout with the same Header and Footer on every page, using React Router's Outlet
+Mobile-first, responsive design for phones, tablets, and desktops
+Mobile navigation menu that opens and closes with a button or the Escape key
+Reusable ProjectCard component fed by a data file
+Accessibility basics: alt text on images, readable colors, visible keyboard focus, a "Skip to content" link, and proper heading order
+Custom favicon and page title
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Make sure Node.js is installed, then run:
 
-## Expanding the Oxlint configuration
+bash
+git clone https://github.com/Mark-john01/Magos-portfolio.git
+cd Magos-portfolio
+npm install
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Open the local link shown in the terminal (usually http://localhost:5173).
+
+Project Structure
+src/
+├── assets/          Project screenshots
+├── components/      Header, Footer, Layout, ProjectCard
+├── data/            projects.js (project list)
+├── pages/           Home, About, Projects, Contact, NotFound
+├── App.jsx          Routes
+├── main.jsx         App entry point
+└── index.css        Tailwind import
+
